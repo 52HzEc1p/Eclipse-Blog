@@ -1,0 +1,240 @@
+.field-content .EasyMDEContainer {
+  max-width: none;
+}
+
+.field-content .markdown-editor-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.8fr);
+  gap: 18px;
+  align-items: start;
+  max-width: 1500px;
+}
+
+.field-content .markdown-editor-pane,
+.field-content .markdown-live-preview {
+  min-width: 0;
+}
+
+.field-content .editor-toolbar {
+  border-radius: 8px 8px 0 0;
+  border-color: #d1d5db;
+  background: #f8fafc;
+}
+
+.field-content .editor-toolbar button.mde-icon {
+  color: #111827;
+  font-family: Arial, "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.field-content .editor-toolbar button.mde-icon::before {
+  display: inline-block;
+}
+
+.field-content .editor-toolbar button.mde-heading::before {
+  content: "H";
+}
+
+.field-content .editor-toolbar button.mde-bold::before {
+  content: "B";
+}
+
+.field-content .editor-toolbar button.mde-italic::before {
+  content: "I";
+  font-style: italic;
+}
+
+.field-content .editor-toolbar button.mde-quote::before {
+  content: "“”";
+}
+
+.field-content .editor-toolbar button.mde-code::before {
+  content: "</>";
+  font-size: 12px;
+}
+
+.field-content .editor-toolbar button.mde-ul::before {
+  content: "•";
+  font-size: 20px;
+}
+
+.field-content .editor-toolbar button.mde-ol::before {
+  content: "1.";
+  font-size: 12px;
+}
+
+.field-content .editor-toolbar button.mde-link::before {
+  content: "L";
+}
+
+.field-content .editor-toolbar button.mde-upload-image::before {
+  content: "↑图";
+  font-size: 12px;
+}
+
+.field-content .editor-toolbar button.mde-image::before {
+  content: "图";
+}
+
+.field-content .editor-toolbar button.mde-preview::before {
+  content: "预";
+}
+
+.field-content .editor-toolbar button.mde-side-by-side::before {
+  content: "分";
+}
+
+.field-content .editor-toolbar button.mde-fullscreen::before {
+  content: "全";
+}
+
+.field-content .CodeMirror {
+  border-color: #d1d5db;
+  border-radius: 0 0 8px 8px;
+  font-family: Cascadia Code, JetBrains Mono, Consolas, monospace;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.field-content .editor-preview,
+.field-content .editor-preview-side {
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.field-content .editor-statusbar {
+  color: #6b7280;
+}
+
+.field-content .markdown-live-preview {
+  position: sticky;
+  top: 12px;
+  max-height: calc(100vh - 48px);
+  overflow: auto;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+}
+
+.field-content .markdown-live-preview-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 10px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f8fafc;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.field-content .markdown-live-preview-body {
+  padding: 20px 24px 28px;
+  color: #111827;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.field-content .markdown-live-preview-body h1,
+.field-content .markdown-live-preview-body h2,
+.field-content .markdown-live-preview-body h3 {
+  margin: 1.25em 0 0.65em;
+  line-height: 1.25;
+}
+
+.field-content .markdown-live-preview-body h1 {
+  font-size: 28px;
+}
+
+.field-content .markdown-live-preview-body h2 {
+  font-size: 22px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.3em;
+}
+
+.field-content .markdown-live-preview-body h3 {
+  font-size: 18px;
+}
+
+.field-content .markdown-live-preview-body p,
+.field-content .markdown-live-preview-body ul,
+.field-content .markdown-live-preview-body ol,
+.field-content .markdown-live-preview-body blockquote,
+.field-content .markdown-live-preview-body pre,
+.field-content .markdown-live-preview-body table {
+  margin: 0 0 1em;
+}
+
+.field-content .markdown-live-preview-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.field-content .markdown-live-preview-body pre {
+  overflow: auto;
+  padding: 14px 16px;
+  border-radius: 6px;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.field-content .markdown-live-preview-body code {
+  font-family: Cascadia Code, JetBrains Mono, Consolas, monospace;
+}
+
+.field-content .markdown-live-preview-body :not(pre) > code {
+  padding: 2px 5px;
+  border-radius: 4px;
+  background: #f1f5f9;
+  color: #be123c;
+}
+
+.field-content .markdown-live-preview-body blockquote {
+  padding: 10px 14px;
+  border-left: 4px solid #94a3b8;
+  background: #f8fafc;
+  color: #475569;
+}
+
+.field-content .markdown-live-preview-body table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+
+.field-content .markdown-live-preview-body th,
+.field-content .markdown-live-preview-body td {
+  padding: 8px 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.field-content .markdown-live-preview-empty {
+  color: #6b7280;
+}
+
+.markdown-editor-status {
+  margin: 8px 0 0;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.markdown-editor-status.is-error {
+  color: #b91c1c;
+}
+
+@media (max-width: 1100px) {
+  .field-content .markdown-editor-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .field-content .markdown-live-preview {
+    position: static;
+    max-height: none;
+  }
+}

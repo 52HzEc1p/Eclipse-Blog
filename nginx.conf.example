@@ -1,0 +1,30 @@
+upstream eclipse_backend {
+    server 127.0.0.1:8000;
+}
+server {
+    listen 80;
+    server_name example.com www.example.com;
+    return 301 https://$host$request_uri;
+}
+server {
+    listen 443 ssl;
+    server_name example.com www.example.com;
+    ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
+    root /srv/eclipse/frontend/dist;
+    index index.html;
+    client_max_body_size 50M;
+    location / { try_files $uri $uri/ /index.html; }
+    location = /index.html { add_header Cache-Control "no-cache"; }
+    location /assets/ { expires 365d; try_files $uri =404; }
+    location ~ ^/(api|admin)/ {
+        proxy_pass http://eclipse_backend;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+    location /static/ { alias /srv/eclipse/backend/staticfiles/; }
+    location /media/ { alias /srv/eclipse/backend/media/; }
+    location ~ /\. { deny all; }
+}

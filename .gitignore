@@ -1,0 +1,35 @@
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+# Runtime data (never publish the site's database or uploaded media)
+*.sqlite3
+*.sqlite3-*
+*.db
+backend/media/
+backend/staticfiles/
+# Dependencies and generated files
+node_modules/
+dist/
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.log
+*.zip
+.pytest_cache/
+.coverage
+# Local review and editor files
+_private/
+_review/
+review/
+.playwright-cli/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+_tmp*

@@ -1,0 +1,179 @@
+[
+  {
+    "title": "从这里开始：模板使用示例",
+    "slug": "demo-notes-01",
+    "excerpt": "这是一篇虚构的示例文章，用来展示列表、目录与 Markdown 排版。可在管理后台修改或删除。",
+    "section": "ctf",
+    "category": {
+      "name": "Notes",
+      "slug": "notes"
+    },
+    "is_featured": true,
+    "content": "## 从这里开始：模板使用示例\n\n这是 Eclipse 模板的示例内容，不包含真实项目、真实目标或账号信息。\n\n## 记录过程\n\n1. 写清楚这次要观察的问题。\n2. 保留与结论有关的过程。\n3. 用文字和配图说明结果。\n\n```python\ndef hello(name):\n    return f\"Hello, {name}\"\n\nprint(hello(\"Eclipse\"))\n```\n\n## 示例配图\n\n![抽象几何示例图](/demo/notes.png)\n\n*图形由模板自带脚本生成。*\n\n## 结果\n\n| 项目 | 内容 |\n|---|---|\n| 状态 | 示例已完成 |\n| 下一步 | 换成你的文章 |\n\n> 从后台进入“文章”，就可以编辑标题、正文和配图。\n",
+    "cover_image": "demo/notes.png"
+  },
+  {
+    "title": "Markdown 排版：标题、列表与代码",
+    "slug": "demo-notes-02",
+    "excerpt": "这是一篇虚构的示例文章，用来展示列表、目录与 Markdown 排版。可在管理后台修改或删除。",
+    "section": "ctf",
+    "category": {
+      "name": "Guides",
+      "slug": "guides"
+    },
+    "is_featured": false,
+    "content": "## Markdown 排版：标题、列表与代码\n\n这是 Eclipse 模板的示例内容，不包含真实项目、真实目标或账号信息。\n\n## 记录过程\n\n1. 写清楚这次要观察的问题。\n2. 保留与结论有关的过程。\n3. 用文字和配图说明结果。\n\n```python\ndef hello(name):\n    return f\"Hello, {name}\"\n\nprint(hello(\"Eclipse\"))\n```\n\n## 示例配图\n\n![抽象几何示例图](/demo/notes.png)\n\n*图形由模板自带脚本生成。*\n\n## 结果\n\n| 项目 | 内容 |\n|---|---|\n| 状态 | 示例已完成 |\n| 下一步 | 换成你的文章 |\n\n> 从后台进入“文章”，就可以编辑标题、正文和配图。\n",
+    "cover_image": "demo/notes.png"
+  },
+  {
+    "title": "一次本地实验的记录方式",
+    "slug": "demo-notes-03",
+    "excerpt": "这是一篇虚构的示例文章，用来展示列表、目录与 Markdown 排版。可在管理后台修改或删除。",
+    "section": "ctf",
+    "category": {
+      "name": "Notes",
+      "slug": "notes"
+    },
+    "is_featured": false,
+    "content": "## 一次本地实验的记录方式\n\n这是 Eclipse 模板的示例内容，不包含真实项目、真实目标或账号信息。\n\n## 记录过程\n\n1. 写清楚这次要观察的问题。\n2. 保留与结论有关的过程。\n3. 用文字和配图说明结果。\n\n```python\ndef hello(name):\n    return f\"Hello, {name}\"\n\nprint(hello(\"Eclipse\"))\n```\n\n## 示例配图\n\n![抽象几何示例图](/demo/notes.png)\n\n*图形由模板自带脚本生成。*\n\n## 结果\n\n| 项目 | 内容 |\n|---|---|\n| 状态 | 示例已完成 |\n| 下一步 | 换成你的文章 |\n\n> 从后台进入“文章”，就可以编辑标题、正文和配图。\n",
+    "cover_image": "demo/notes.png"
+  },
+  {
+    "title": "为技术笔记整理目录",
+    "slug": "demo-notes-04",
+    "excerpt": "这是一篇虚构的示例文章，用来展示列表、目录与 Markdown 排版。可在管理后台修改或删除。",
+    "section": "ctf",
+    "category": {
+      "name": "Guides",
+      "slug": "guides"
+    },
+    "is_featured": false,
+    "content": "## 为技术笔记整理目录\n\n这是 Eclipse 模板的示例内容，不包含真实项目、真实目标或账号信息。\n\n## 记录过程\n\n1. 写清楚这次要观察的问题。\n2. 保留与结论有关的过程。\n3. 用文字和配图说明结果。\n\n```python\ndef hello(name):\n    return f\"Hello, {name}\"\n\nprint(hello(\"Eclipse\"))\n```\n\n## 示例配图\n\n![抽象几何示例图](/demo/notes.png)\n\n*图形由模板自带脚本生成。*\n\n## 结果\n\n| 项目 | 内容 |\n|---|---|\n| 状态 | 示例已完成 |\n| 下一步 | 换成你的文章 |\n\n> 从后台进入“文章”，就可以编辑标题、正文和配图。\n",
+    "cover_image": "demo/notes.png"
+  },
+  {
+    "title": "如何组织图片与图注",
+    "slug": "demo-notes-05",
+    "excerpt": "这是一篇虚构的示例文章，用来展示列表、目录与 Markdown 排版。可在管理后台修改或删除。",
+    "section": "ctf",
+    "category": {
+      "name": "Notes",
+      "slug": "notes"
+    },
+    "is_featured": false,
+    "content": "## 如何组织图片与图注\n\n这是 Eclipse 模板的示例内容，不包含真实项目、真实目标或账号信息。\n\n## 记录过程\n\n1. 写清楚这次要观察的问题。\n2. 保留与结论有关的过程。\n3. 用文字和配图说明结果。\n\n```python\ndef hello(name):\n    return f\"Hello, {name}\"\n\nprint(hello(\"Eclipse\"))\n```\n\n## 示例配图\n\n![抽象几何示例图](/demo/notes.png)\n\n*图形由模板自带脚本生成。*\n\n## 结果\n\n| 项目 | 内容 |\n|---|---|\n| 状态 | 示例已完成 |\n| 下一步 | 换成你的文章 |\n\n> 从后台进入“文章”，就可以编辑标题、正文和配图。\n",
+    "cover_image": "demo/notes.png"
+  },
+  {
+    "title": "接口文档的阅读笔记",
+    "slug": "demo-notes-06",
+    "excerpt": "这是一篇虚构的示例文章，用来展示列表、目录与 Markdown 排版。可在管理后台修改或删除。",
+    "section": "ctf",
+    "category": {
+      "name": "Guides",
+      "slug": "guides"
+    },
+    "is_featured": false,
+    "content": "## 接口文档的阅读笔记\n\n这是 Eclipse 模板的示例内容，不包含真实项目、真实目标或账号信息。\n\n## 记录过程\n\n1. 写清楚这次要观察的问题。\n2. 保留与结论有关的过程。\n3. 用文字和配图说明结果。\n\n```python\ndef hello(name):\n    return f\"Hello, {name}\"\n\nprint(hello(\"Eclipse\"))\n```\n\n## 示例配图\n\n![抽象几何示例图](/demo/notes.png)\n\n*图形由模板自带脚本生成。*\n\n## 结果\n\n| 项目 | 内容 |\n|---|---|\n| 状态 | 示例已完成 |\n| 下一步 | 换成你的文章 |\n\n> 从后台进入“文章”，就可以编辑标题、正文和配图。\n",
+    "cover_image": "demo/notes.png"
+  },
+  {
+    "title": "测试记录与结论分开写",
+    "slug": "demo-notes-07",
+    "excerpt": "这是一篇虚构的示例文章，用来展示列表、目录与 Markdown 排版。可在管理后台修改或删除。",
+    "section": "ctf",
+    "category": {
+      "name": "Notes",
+      "slug": "notes"
+    },
+    "is_featured": false,
+    "content": "## 测试记录与结论分开写\n\n这是 Eclipse 模板的示例内容，不包含真实项目、真实目标或账号信息。\n\n## 记录过程\n\n1. 写清楚这次要观察的问题。\n2. 保留与结论有关的过程。\n3. 用文字和配图说明结果。\n\n```python\ndef hello(name):\n    return f\"Hello, {name}\"\n\nprint(hello(\"Eclipse\"))\n```\n\n## 示例配图\n\n![抽象几何示例图](/demo/notes.png)\n\n*图形由模板自带脚本生成。*\n\n## 结果\n\n| 项目 | 内容 |\n|---|---|\n| 状态 | 示例已完成 |\n| 下一步 | 换成你的文章 |\n\n> 从后台进入“文章”，就可以编辑标题、正文和配图。\n",
+    "cover_image": "demo/notes.png"
+  },
+  {
+    "title": "给文章添加分类和标签",
+    "slug": "demo-notes-08",
+    "excerpt": "这是一篇虚构的示例文章，用来展示列表、目录与 Markdown 排版。可在管理后台修改或删除。",
+    "section": "ctf",
+    "category": {
+      "name": "Guides",
+      "slug": "guides"
+    },
+    "is_featured": false,
+    "content": "## 给文章添加分类和标签\n\n这是 Eclipse 模板的示例内容，不包含真实项目、真实目标或账号信息。\n\n## 记录过程\n\n1. 写清楚这次要观察的问题。\n2. 保留与结论有关的过程。\n3. 用文字和配图说明结果。\n\n```python\ndef hello(name):\n    return f\"Hello, {name}\"\n\nprint(hello(\"Eclipse\"))\n```\n\n## 示例配图\n\n![抽象几何示例图](/demo/notes.png)\n\n*图形由模板自带脚本生成。*\n\n## 结果\n\n| 项目 | 内容 |\n|---|---|\n| 状态 | 示例已完成 |\n| 下一步 | 换成你的文章 |\n\n> 从后台进入“文章”，就可以编辑标题、正文和配图。\n",
+    "cover_image": "demo/notes.png"
+  },
+  {
+    "title": "把零散想法整理成文章",
+    "slug": "demo-notes-09",
+    "excerpt": "这是一篇虚构的示例文章，用来展示列表、目录与 Markdown 排版。可在管理后台修改或删除。",
+    "section": "ctf",
+    "category": {
+      "name": "Notes",
+      "slug": "notes"
+    },
+    "is_featured": false,
+    "content": "## 把零散想法整理成文章\n\n这是 Eclipse 模板的示例内容，不包含真实项目、真实目标或账号信息。\n\n## 记录过程\n\n1. 写清楚这次要观察的问题。\n2. 保留与结论有关的过程。\n3. 用文字和配图说明结果。\n\n```python\ndef hello(name):\n    return f\"Hello, {name}\"\n\nprint(hello(\"Eclipse\"))\n```\n\n## 示例配图\n\n![抽象几何示例图](/demo/notes.png)\n\n*图形由模板自带脚本生成。*\n\n## 结果\n\n| 项目 | 内容 |\n|---|---|\n| 状态 | 示例已完成 |\n| 下一步 | 换成你的文章 |\n\n> 从后台进入“文章”，就可以编辑标题、正文和配图。\n",
+    "cover_image": "demo/notes.png"
+  },
+  {
+    "title": "项目演示 / 01",
+    "slug": "demo-editing-01",
+    "excerpt": "自带的抽象动态素材，用来展示作品卡片与播放入口。",
+    "section": "editing",
+    "post_type": "video",
+    "video_url": "/demo/ambient.mp4",
+    "category": {
+      "name": "作品示例",
+      "slug": "demo-editing"
+    },
+    "is_featured": true,
+    "content": "## 关于这段示例\n\n这段无声渐变动画由脚本生成，可换成自己的作品链接。\n\n![示例封面](/demo/frames.png)\n",
+    "cover_image": "demo/frames.png"
+  },
+  {
+    "title": "项目演示 / 02",
+    "slug": "demo-editing-02",
+    "excerpt": "自带的抽象动态素材，用来展示作品卡片与播放入口。",
+    "section": "editing",
+    "post_type": "video",
+    "video_url": "/demo/ambient.mp4",
+    "category": {
+      "name": "作品示例",
+      "slug": "demo-editing"
+    },
+    "is_featured": false,
+    "content": "## 关于这段示例\n\n这段无声渐变动画由脚本生成，可换成自己的作品链接。\n\n![示例封面](/demo/frames.png)\n",
+    "cover_image": "demo/frames.png"
+  },
+  {
+    "title": "影像片段 / 01",
+    "slug": "demo-games-01",
+    "excerpt": "自带的抽象动态素材，用来展示作品卡片与播放入口。",
+    "section": "games",
+    "post_type": "video",
+    "video_url": "/demo/ambient.mp4",
+    "category": {
+      "name": "影像示例",
+      "slug": "demo-games"
+    },
+    "is_featured": true,
+    "content": "## 关于这段示例\n\n这段无声渐变动画由脚本生成，可换成自己的作品链接。\n\n![示例封面](/demo/play.png)\n",
+    "cover_image": "demo/play.png"
+  },
+  {
+    "title": "影像片段 / 02",
+    "slug": "demo-games-02",
+    "excerpt": "自带的抽象动态素材，用来展示作品卡片与播放入口。",
+    "section": "games",
+    "post_type": "video",
+    "video_url": "/demo/ambient.mp4",
+    "category": {
+      "name": "影像示例",
+      "slug": "demo-games"
+    },
+    "is_featured": false,
+    "content": "## 关于这段示例\n\n这段无声渐变动画由脚本生成，可换成自己的作品链接。\n\n![示例封面](/demo/play.png)\n",
+    "cover_image": "demo/play.png"
+  }
+]

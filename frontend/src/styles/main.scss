@@ -1,0 +1,123 @@
+// === 暗黑主题变量 ===
+:root {
+  // 色彩系统
+  --color-canvas: #0a0a0f;
+  --color-surface-1: #12121a;
+  --color-surface-2: #1a1a25;
+  --color-ink: #e8e6e3;
+  --color-ink-muted: #8a8a9a;
+  --color-accent: #6366f1;
+  --color-accent-glow: #818cf8;
+  --color-hairline: #1f1f2e;
+
+  // 板块专属色
+  --color-ctf: #22d3ee;
+  --color-editing: #f472b6;
+  --color-games: #a78bfa;
+  --color-valorant: #ff4655;
+  --color-souls: #d4a574;
+
+  // 字体
+  --font-heading: 'Space Grotesk', 'Noto Sans SC', -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', 'Noto Sans SC', -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'Noto Serif SC', 'Noto Sans SC', serif;
+  --font-mono: 'Cascadia Code', 'Cascadia Mono', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace;
+
+  // 间距
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+
+  // 圆角
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+}
+
+// === 全局重置 ===
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  line-height: 1.6;
+}
+
+// === 滚动条 (暗黑风格) ===
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-canvas);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-2);
+  border-radius: 4px;
+
+  &:hover {
+    background: var(--color-ink-muted);
+  }
+}
+
+// === 链接 ===
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--color-accent-glow);
+  }
+}
+
+// === 选中文字 ===
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: var(--color-ink);
+}
+
+// === 通用容器 ===
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+// === 代码高亮暗黑主题 ===
+.hljs {
+  background: transparent !important;
+  color: #abb2bf;
+
+  .hljs-keyword { color: #c678dd; }
+  .hljs-string { color: #98c379; }
+  .hljs-number { color: #d19a66; }
+  .hljs-comment { color: #5c6370; font-style: italic; }
+  .hljs-function { color: #61afef; }
+  .hljs-title { color: #61afef; }
+  .hljs-built_in { color: #e5c07b; }
+  .hljs-type { color: #e5c07b; }
+  .hljs-attr { color: #d19a66; }
+  .hljs-variable { color: #e06c75; }
+  .hljs-tag { color: #e06c75; }
+  .hljs-name { color: #e06c75; }
+  .hljs-selector-class { color: #d19a66; }
+  .hljs-selector-tag { color: #e06c75; }
+  .hljs-meta { color: #61afef; }
+  .hljs-literal { color: #56b6c2; }
+}
