@@ -30,6 +30,7 @@ review/
 .playwright-cli/
 .idea/
 .vscode/
+.obsidian/
 .DS_Store
 Thumbs.db
 _tmp*
