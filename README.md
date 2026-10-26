@@ -1,6 +1,7 @@
-# Eclipse
+# Eclipse/日蚀
 
-一个深色个人博客模板，基于 Vue 3、Vite 和 Django。首页保留眼睛开合与导航过渡，三个分区分别展示文章、作品和影像，内容通过 Django 后台编辑。
+**示例请看 [首页 · 52HzEc1p](https://52hzec1p.cn/)**
+一个历时一周的vibe-coding的赛博博客的模板作品，基于 Vue 3、Vite 和 Django，使用codex+kimi制作。首页是精心设计的魔眼眨眼的动画入场，共有三个内容分区，可自行进行内容安排，内容通过 Django 后台编辑。适合喜欢酷炫风格的人使用。
 
 ![Eclipse 首页示例](docs/screenshots/home.png)
 
@@ -10,7 +11,7 @@
 
 ## 界面与功能
 
-- 首页：WebGL 眼睛、聚焦文字、发光卡片、流体导航。
+- 首页：WebGL 魔焰眼睛、聚焦文字、发光卡片、流体导航。
 - Articles：文章分类、分页、Markdown、代码高亮、文章目录和阅读进度。
 - Projects / Gallery：作品卡片、视频链接和动态背景。
 - About：介绍、卡片和联系方式可在后台编辑。
@@ -63,20 +64,20 @@ cp backend/.env.example backend/.env
 - `seed_demo` 可重复执行，不覆盖已存在的文章；示例可在后台删除。
 - 开发环境未设置密钥时会使用临时随机密钥，重启后旧会话失效。需要保留登录状态时，在本地 `.env` 中设置自己的密钥。
 
-## 从哪里改成自己的博客
+## 从哪里替换为自己的博客（建议直接使用agent辅助替换）
 
-| 要改的内容 | 位置 |
-|---|---|
-| 站点名、首页标题、标语、备案号、导航社交链接 | `frontend/.env`，参照 `.env.example` |
-| 站点分享标题和描述 | `frontend/index.html` |
-| 文章、分类、标签、About、分区文案 | Django 管理后台 |
-| 导航栏目名称 | `frontend/src/components/common/NavBar.vue`；首页卡片与页面标题见对应页面及 `router/index.js` |
-| 默认示例文章 | `backend/demo/posts.json` |
-| 主题颜色、字体和基础样式 | `frontend/src/styles/main.scss` |
-| 各页布局、动效参数 | `frontend/src/views/` 和 `frontend/src/components/effects/` |
-| About / Gallery 背景 | `frontend/public/wallpaper/aboutme.mp4` / `elden-ring-wallpaper.mp4`；可通过 `VITE_ABOUT_VIDEO` / `VITE_GAMES_VIDEO` 替换 |
-| 示例作品视频 | `frontend/public/demo/ambient.mp4` |
-| 服务端密钥、域名 | `backend/.env` |
+| 要改的内容                  | 位置                                                                                                                  |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| 站点名、首页标题、标语、备案号、导航社交链接 | `frontend/.env`，参照 `.env.example`                                                                                   |
+| 站点分享标题和描述              | `frontend/index.html`                                                                                               |
+| 文章、分类、标签、About、分区文案    | Django 管理后台                                                                                                         |
+| 导航栏目名称                 | `frontend/src/components/common/NavBar.vue`；首页卡片与页面标题见对应页面及 `router/index.js`                                       |
+| 默认示例文章                 | `backend/demo/posts.json`                                                                                           |
+| 主题颜色、字体和基础样式           | `frontend/src/styles/main.scss`                                                                                     |
+| 各页布局、动效参数              | `frontend/src/views/` 和 `frontend/src/components/effects/`                                                          |
+| About / Gallery 背景     | `frontend/public/wallpaper/aboutme.mp4` / `elden-ring-wallpaper.mp4`；可通过 `VITE_ABOUT_VIDEO` / `VITE_GAMES_VIDEO` 替换 |
+| 示例作品视频                 | `frontend/public/demo/ambient.mp4`                                                                                  |
+| 服务端密钥、域名               | `backend/.env`                                                                                                      |
 
 `VITE_*` 配置会进入浏览器，不能放密码或服务端密钥。更改前端环境变量后要重启开发服务或重新构建。
 
