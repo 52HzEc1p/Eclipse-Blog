@@ -1,7 +1,7 @@
 # Eclipse/日蚀
 
-**示例请看 [首页 · 52HzEc1p](https://52hzec1p.cn/)**
-一个历时一周的vibe-coding的赛博博客的模板作品，基于 Vue 3、Vite 和 Django，使用codex+kimi制作。首页是精心设计的魔眼眨眼的动画入场，共有三个内容分区，可自行进行内容安排，内容通过 Django 后台编辑。适合喜欢酷炫风格的人使用。
+**强烈推荐 先看示例！！！ [首页 · 52HzEc1p](https://52hzec1p.cn/)**
+历时一周的vibe-coding的赛博博客模板作品，基于 Vue 3、Vite 和 Django，使用codex+kimi+astra制作。首页是精心设计的魔眼眨眼的动画入场，共有三个内容分区，可自行进行内容安排，内容通过 Django 后台编辑。适合喜欢酷炫风格的人使用。
 
 ![Eclipse 首页示例](docs/screenshots/home.png)
 
