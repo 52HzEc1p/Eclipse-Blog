@@ -14,6 +14,8 @@
 
 ## 后台编辑器
 
+当前编辑器使用 Vditor 4.0.1 和 markdown-it 14.2.0，本地资源分别位于 `backend/blog/static/blog/vendor/vditor/` 与 `backend/blog/static/blog/vendor/markdown-it/`。两者均保留随引入文件提供的 MIT 许可证与版权声明，见各目录中的 `LICENSE`。上游项目为 [Vditor](https://github.com/Vanessa219/vditor) 和 [markdown-it](https://github.com/markdown-it/markdown-it)。
+
 `backend/blog/static/blog/vendor/easymde/` 保留 EasyMDE v2.21.0 的原始头部声明。许可证副本位于 `licenses/easymde.txt`，上游为 [EasyMDE](https://github.com/Ionaru/easy-markdown-editor)。其捆绑内容也保留文件内的上游声明。
 
 ## 安装依赖

@@ -15,6 +15,8 @@ backend/staticfiles/
 # Dependencies and generated files
 node_modules/
 dist/
+!backend/blog/static/blog/vendor/vditor/dist/
+!backend/blog/static/blog/vendor/vditor/dist/**
 venv/
 .venv/
 __pycache__/
@@ -28,6 +30,7 @@ _private/
 _review/
 review/
 .playwright-cli/
+output/
 .idea/
 .vscode/
 .obsidian/

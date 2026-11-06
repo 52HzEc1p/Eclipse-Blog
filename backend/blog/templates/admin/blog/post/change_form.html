@@ -1,0 +1,41 @@
+{% extends "admin/change_form.html" %}
+{% load static admin_modify %}
+
+{% block bodyclass %}{{ block.super }} post-studio{% endblock %}
+{% block nav-sidebar %}{% endblock %}
+{% block content_title %}<h1>文章编辑</h1>{% endblock %}
+{% block content_subtitle %}{% endblock %}
+{% block submit_buttons_top %}
+<div class="studio-bar">
+  <a class="studio-back" href="{% url 'admin:blog_post_changelist' %}">← 文章列表</a>
+  <span id="studio-save-status" role="status" aria-live="polite">正在加载编辑器…</span>
+  <button type="button" id="studio-toggle-settings" aria-expanded="false" aria-controls="studio-settings">文章设置</button>
+  {% if has_change_permission or has_add_permission %}<input type="submit" name="_continue" value="保存文章" class="default">{% endif %}
+</div>
+{% endblock %}
+
+{% block field_sets %}
+<div id="studio-draft-notice" class="studio-notice" hidden>
+  <div><strong>发现本地未保存的草稿</strong><p id="studio-draft-description"></p></div>
+  <button type="button" id="studio-restore-draft">恢复草稿</button>
+  <button type="button" id="studio-discard-draft">丢弃草稿</button>
+</div>
+<div class="studio-layout" id="studio-layout"
+     data-user="{{ request.user.pk }}" data-post="{{ original.pk|default:'new' }}"
+     data-revision="{{ original.updated_at|date:'c' }}"
+     data-vendor="{% static 'blog/vendor/vditor' %}"
+     data-upload="{% url 'admin_markdown_image_upload' %}">
+  <section class="studio-writing" aria-label="文章写作区">
+    {% for fieldset in adminform %}{% if forloop.first %}
+      {% include "admin/includes/fieldset.html" with heading_level=2 prefix="studio" id_prefix=0 id_suffix=forloop.counter0 %}
+    {% endif %}{% endfor %}
+    <p class="studio-writing-note">直接编辑正文 · 粘贴或拖入图片 · Ctrl / ⌘ + S 保存文章</p>
+  </section>
+  <aside id="studio-settings" class="studio-settings" aria-label="文章设置">
+    <h2 class="studio-settings-title">文章设置</h2>
+    {% for fieldset in adminform %}{% if not forloop.first %}
+      {% include "admin/includes/fieldset.html" with heading_level=3 prefix="studio" id_prefix=0 id_suffix=forloop.counter0 %}
+    {% endif %}{% endfor %}
+  </aside>
+</div>
+{% endblock %}

@@ -6,3 +6,5 @@
 *.md text eol=lf
 *.png binary
 *.mp4 binary
+# Preserve upstream whitespace in bundled editor distributions.
+backend/blog/static/blog/vendor/** -whitespace
