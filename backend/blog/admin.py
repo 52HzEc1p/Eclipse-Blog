@@ -148,6 +148,15 @@ class TagAdmin(admin.ModelAdmin):
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
+    change_form_template = 'admin/blog/post/change_form.html'
+
+    def formfield_for_dbfield(self, db_field, request, **kwargs):
+        field = super().formfield_for_dbfield(db_field, request, **kwargs)
+        if db_field.name == 'content':
+            # Markdown whitespace can be meaningful; Django CharField strips it by default.
+            field.strip = False
+        return field
+
     list_display = [
         'title',
         'section',
@@ -183,8 +192,14 @@ class PostAdmin(admin.ModelAdmin):
     }
 
     fieldsets = (
-        ('基础内容', {
-            'fields': ('title', 'slug', 'excerpt', 'content', 'cover_image', 'cover_preview'),
+        ('文章正文', {
+            'fields': ('title', 'content'),
+        }),
+        ('摘要与封面', {
+            'fields': ('excerpt', 'cover_image', 'cover_preview'),
+        }),
+        ('文章地址', {
+            'fields': ('slug',),
         }),
         ('分类与展示', {
             'fields': ('section', 'post_type', 'category', 'tags'),
@@ -285,12 +300,14 @@ class PostAdmin(admin.ModelAdmin):
     class Media:
         css = {
             'all': (
-                'blog/vendor/easymde/easymde.min.css',
+                'blog/vendor/vditor/dist/index.css',
                 'blog/admin/markdown_editor.css',
             ),
         }
         js = (
-            'blog/vendor/easymde/easymde.min.js',
+            'blog/vendor/vditor/dist/index.min.js',
+            'blog/vendor/markdown-it/markdown-it.min.js',
+            'blog/admin/markdown_preservation.js',
             'blog/admin/post_markdown_editor.js',
         )
 

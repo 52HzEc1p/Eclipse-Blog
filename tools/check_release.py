@@ -3,8 +3,8 @@ from pathlib import Path
 import re, sys
 
 ROOT = Path(__file__).resolve().parents[1]
-SKIP = {'.git', 'node_modules', '.venv', 'venv', '__pycache__', 'dist', 'staticfiles', '.pytest_cache'}
-PRIVATE = {'_private', '_review', 'review', '.playwright-cli', 'media'}
+SKIP = {'.git', 'node_modules', '.venv', 'venv', '__pycache__', 'staticfiles', '.pytest_cache'}
+PRIVATE = {'_private', '_review', 'review', '.playwright-cli', 'media', 'output'}
 TEXT = {'.py', '.js', '.mjs', '.vue', '.scss', '.css', '.json', '.html', '.md', '.txt', '.example', '.yml', '.yaml', '.svg'}
 PATTERNS = [
     ('private key', re.compile(r'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----')),
@@ -18,6 +18,7 @@ def source_files():
     for p in ROOT.rglob('*'):
         relative = p.relative_to(ROOT)
         if set(relative.parts) & (SKIP | PRIVATE): continue
+        if relative.parts[:2] == ('frontend', 'dist'): continue
         if not p.is_file(): continue
         if p.name.startswith('.env') and p.name != '.env.example': continue
         if p.suffix in {'.pyc', '.log', '.zip', '.sqlite3', '.db'} or '.sqlite3-' in p.name: continue

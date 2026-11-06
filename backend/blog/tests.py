@@ -237,18 +237,15 @@ class PostAdminWorkspaceTests(TestCase):
         media_js = list(self.post_admin.media._js)
         media_css = self.post_admin.media._css.get('all', [])
 
-        self.assertIn('blog/vendor/easymde/easymde.min.js', media_js)
+        self.assertIn('blog/vendor/vditor/dist/index.min.js', media_js)
         self.assertIn('blog/admin/post_markdown_editor.js', media_js)
-        self.assertIn('blog/vendor/easymde/easymde.min.css', media_css)
+        self.assertIn('blog/vendor/vditor/dist/index.css', media_css)
         self.assertIn('blog/admin/markdown_editor.css', media_css)
 
-    def test_markdown_editor_script_defines_live_preview_workspace(self):
-        script_path = settings.BASE_DIR / 'blog' / 'static' / 'blog' / 'admin' / 'post_markdown_editor.js'
-        script = script_path.read_text(encoding='utf-8')
-
-        self.assertIn('markdown-editor-workspace', script)
-        self.assertIn('markdown-live-preview', script)
-        self.assertIn('schedulePreviewRender', script)
+    def test_markdown_content_keeps_leading_indentation_and_trailing_newlines(self):
+        field = self.post_admin.formfield_for_dbfield(Post._meta.get_field('content'), None)
+        markdown = '    indented_code()\n\n末尾空行\n\n'
+        self.assertEqual(field.clean(markdown), markdown)
 
 
 class MediaImageAdminWorkspaceTests(TestCase):

@@ -15,7 +15,7 @@
 - Articles：文章分类、分页、Markdown、代码高亮、文章目录和阅读进度。
 - Projects / Gallery：作品卡片、视频链接和动态背景。
 - About：介绍、卡片和联系方式可在后台编辑。
-- 管理后台：文章草稿/发布、分类、标签、图片上传及 Markdown 编辑器。
+- 管理后台：文章草稿/发布、分类、标签、图片上传及 Vditor Markdown 编辑器，支持即时渲染、源码切换、全屏和本机草稿恢复。
 
 模板包含虚构文章、程序生成的几何配图和演示动画；About 与 Gallery 使用维护者选定的两段原站背景视频。不包含站长的数据库、账号、私人文章或原始文章截图。
 
@@ -88,12 +88,15 @@ cp backend/.env.example backend/.env
 ```bash
 python backend/manage.py check
 python backend/manage.py test blog accounts
+node --test backend/blog/browser_tests/markdown_preservation.test.cjs
 cd frontend
 npm run check:nav
 npm run build
 ```
 
 使用前面创建的虚拟环境执行 Python 命令。生产部署见 [DEPLOY.md](DEPLOY.md)，发布前的文件整理见 [PUBLISHING.md](PUBLISHING.md)。
+
+后台编辑器依赖随源码提供，不依赖外部 CDN。未修改正文时保存会保留原始 Markdown；本机草稿按用户与文章区分，保留七天，恢复标题、摘要和正文后仍需手动保存。完整浏览器回归检查见 [编辑器测试说明](backend/blog/browser_tests/README.md)。
 
 ## 目录
 
