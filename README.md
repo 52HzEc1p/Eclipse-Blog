@@ -3,11 +3,13 @@
 **强烈推荐 先看示例！！！ [首页 · 52HzEc1p](https://52hzec1p.cn/)**
 历时一周的vibe-coding的赛博博客模板作品，基于 Vue 3、Vite 和 Django，使用codex+kimi+astra制作。首页是精心设计的魔眼眨眼的动画入场，共有三个内容分区，可自行进行内容安排，内容通过 Django 后台编辑。适合喜欢酷炫风格的人使用。
 
+**[下载服务器部署包](https://github.com/52HzEc1p/Eclipse-Blog/releases/download/v0.1.0/Eclipse-Blog-a868489-deploy.zip)** · [查看版本说明](https://github.com/52HzEc1p/Eclipse-Blog/releases/tag/v0.1.0) · [源码部署说明](DEPLOY.md)
+
 ![Eclipse 首页示例](docs/screenshots/home.png)
 
 [Articles](docs/screenshots/ctf.png) · [Projects](docs/screenshots/editing.png) · [Gallery](docs/screenshots/games.png) · [About](docs/screenshots/about.png)
 
-> 维护者原创部分采用 [Unlicense](LICENSE)：可以自由使用、修改、分发和商用，不要求署名，也不要求修改版继续开源。第三方组件不在此版权放弃范围内，详见 [许可范围](LICENSE_SCOPE.md)。当前仍为本地发布准备版，动效组件的来源与分发条件见 [第三方说明](THIRD_PARTY_NOTICES.md)。
+> 维护者原创部分采用 [Unlicense](LICENSE)：可以自由使用、修改、分发和商用，不要求署名，也不要求修改版继续开源。第三方组件不在此版权放弃范围内，详见 [许可范围](LICENSE_SCOPE.md)。动效组件的来源与分发条件仍需核对，见 [第三方说明](THIRD_PARTY_NOTICES.md)。
 
 ## 界面与功能
 
@@ -19,7 +21,34 @@
 
 模板包含虚构文章、程序生成的几何配图和演示动画；About 与 Gallery 使用维护者选定的两段原站背景视频。不包含站长的数据库、账号、私人文章或原始文章截图。
 
-## 本地运行
+## 下载与服务器部署
+
+如果想部署到服务器，再通过后台管理文章和页面内容，可以直接使用部署包。
+
+| 下载方式 | 适合用途 | 包含内容 |
+|---|---|---|
+| [服务器部署包（v0.1.0）](https://github.com/52HzEc1p/Eclipse-Blog/releases/download/v0.1.0/Eclipse-Blog-a868489-deploy.zip) | 部署博客，日常在后台更新内容 | Django 后端、已构建的 `frontend/dist`、示例素材和部署说明 |
+| 克隆仓库或下载 Source code | 修改前端配置、页面布局和动效，继续开发 | 项目源码；需要自行安装前端依赖并构建 |
+
+部署包的前端已经构建好，首次部署可以跳过 Node.js 安装和 `npm run build`。服务器仍需 Python 3.12+、Nginx 和 HTTPS，并安装 `backend/requirements.txt` 中的后端依赖。
+
+基本流程：
+
+1. 下载 `Eclipse-Blog-a868489-deploy.zip`，将包内 `Eclipse-Blog` 目录的内容解压到服务器项目目录。
+2. 按包内 `README.md` 安装 Python 依赖，配置 `backend/.env` 中的密钥、域名和 HTTPS 来源。
+3. 运行数据库迁移、收集静态文件，再用 `createsuperuser` 创建自己的管理员账号。需要示例文章时可运行 `seed_demo`。
+4. 配置并常驻运行 Gunicorn；按 `nginx.conf.example` 配置 Nginx，网站根目录指向 `frontend/dist`，并配置 HTTPS。
+5. 访问 `https://你的域名/admin/` 登录后台，修改内容后保存，再刷新前台查看。
+
+**后台可以修改：**文章正文、摘要、封面、视频链接、发布状态、分类、标签、About 介绍和联系方式，以及栏目页标题、描述、筛选项等文案。首页的栏目卡片会读取后台设置的栏目标题和描述，普通内容修改无需重新构建前端。
+
+**需要修改前端配置或源码：**全站名称、首页主标题和标语、备案号、导航名称与社交链接、背景视频配置，以及布局、样式和动效。修改这些内容时，请使用源码版重新构建，再替换服务器上的 `frontend/dist`。后台 About 页的“站点名”只影响该页面。
+
+GitHub 自动附带的 `Source code (zip)` 不包含已构建的前端，直接部署请下载文件名带 `deploy` 的压缩包。源码版的完整部署流程见 [DEPLOY.md](DEPLOY.md)。
+
+更新已有博客前，请先备份并保留服务器上的 `backend/.env`、`backend/db.sqlite3` 和 `backend/media/`。
+
+## 源码版：本地运行
 
 需要 Python 3.12+、Node.js 22.12+。以下命令在项目根目录执行。
 
